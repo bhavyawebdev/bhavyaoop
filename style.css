@@ -1,0 +1,186 @@
+/* ===== Global Theme Variables ===== */
+:root {
+    --black: #000;
+    --dark: #1a1a1a;
+    --gray: #333;
+    --light-gray: #121212;
+    --white: #fff;
+    --red: #b00020;
+    --red-light: #2c0b0e;
+    --green: #00e676;
+    --green-dark: #003d2c;
+    --radius: 10px;
+    --shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    --transition: all 0.3s ease;
+}
+
+/* ===== Base Styles ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--white);
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* ===== Table ===== */
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: var(--dark);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    color: var(--white);
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    font-size: 1em;
+    border-bottom: 1px solid var(--gray);
+}
+
+th {
+    background-color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tr:hover {
+    background-color: #1f1f1f;
+}
+
+/* ===== Buttons & Links ===== */
+a, .add-button, input[type="submit"] {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.add-button {
+    background: linear-gradient(135deg, var(--black), var(--dark));
+    margin: 20px auto;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    width: fit-content;
+}
+
+.add-button:hover {
+    background: linear-gradient(135deg, var(--dark), var(--black));
+    transform: scale(1.05);
+}
+
+.edit-link {
+    background-color: var(--gray);
+}
+
+.edit-link:hover {
+    background-color: #444;
+}
+
+.delete-link {
+    background-color: var(--red);
+}
+
+.delete-link:hover {
+    background-color: #8e0000;
+}
+
+/* ===== Forms ===== */
+form {
+    background-color: var(--dark);
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: var(--radius);
+    max-width: 500px;
+    box-shadow: var(--shadow);
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #444;
+    border-radius: var(--radius);
+    background-color: #222;
+    color: var(--white);
+    margin-bottom: 15px;
+    font-size: 1em;
+    transition: var(--transition);
+}
+
+input[type="submit"] {
+    background-color: var(--black);
+}
+
+input[type="submit"]:hover {
+    background-color: var(--dark);
+    transform: scale(1.03);
+}
+
+/* ===== Messages ===== */
+.error-message,
+.success-message {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 600px;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: bold;
+}
+
+.error-message {
+    background-color: var(--red-light);
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+.success-message {
+    background-color: var(--green-dark);
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .add-button {
+        font-size: 0.9em;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
